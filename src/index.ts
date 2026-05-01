@@ -206,7 +206,7 @@ async function generateScribbleImage(
 
 registerSnapHandler(
   app,
-  async (ctx) => {
+  async (ctx: any) => {
     const base = getBaseUrl(ctx.request);
     const url = new URL(ctx.request.url);
     const action = url.searchParams.get("action");
@@ -450,10 +450,7 @@ registerSnapHandler(
     };
   },
   {
-    title: "ScribblePFP",
-    description:
-      "Turn your Farcaster PFP into an MS Paint masterpiece. Gloriously bad.",
-  }
+{}
 );
 
 // Download redirect endpoint — redirects to the cached scribble URL
