@@ -1,0 +1,23 @@
+{
+  "name": "scribble-pfp-snap",
+  "version": "1.0.0",
+  "description": "Farcaster snap that turns your PFP into a glorious MS Paint disaster",
+  "type": "module",
+  "scripts": {
+    "dev": "SKIP_JFS_VERIFICATION=true tsx watch src/server.ts",
+    "build": "tsc --noEmit",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@farcaster/snap-hono": "^2.0.0",
+    "@farcaster/snap-turso": "^2.0.0",
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.0.0",
+    "@noble/curves": "^2.0.0",
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
