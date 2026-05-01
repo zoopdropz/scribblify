@@ -8,8 +8,19 @@
   ],
   "routes": [
     {
+      "src": "/download",
+      "dest": "src/index.ts",
+      "methods": ["GET"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Accept"
+      }
+    },
+    {
       "src": "/(.*)",
       "dest": "src/index.ts",
+      "methods": ["GET", "POST", "OPTIONS"],
       "headers": {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
